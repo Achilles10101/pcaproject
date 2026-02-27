@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — The Hot Chocolate Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-name">The Hot Chocolate Co.</span>
+        <span class="brand-tagline">Crafted with Love Since 2018</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <button class="dropdown-toggle">Menu</button>
+          <div class="dropdown-menu">
+            <a href="menu.html#classic">Classic Drinks</a>
+            <a href="menu.html#seasonal">Seasonal Specials</a>
+            <a href="menu.html#specialty">Specialty Blends</a>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </nav>
+
+  <!-- =====================================================
+       PAGE HERO
+       ===================================================== -->
+  <header class="page-hero">
+    <div class="container">
+      <h1>Say Hello</h1>
+      <p>Whether it's a booking, a question, or just a kind word — we'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       CONTACT LAYOUT
+       ===================================================== -->
+  <main class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- ---- CONTACT FORM (frontend only, no backend) ---- -->
+        <div class="contact-form-wrap reveal">
+          <h2>Send Us a Message</h2>
+
+          <!--
+            id="contactForm" is required by script.js to wire the submit event.
+            This form does NOT submit to a server — it simulates a send.
+          -->
+          <form id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Maya"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Chen"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Choose a topic…</option>
+                <option value="general">General Enquiry</option>
+                <option value="booking">Private Event Booking</option>
+                <option value="feedback">Feedback / Compliment</option>
+                <option value="allergy">Allergy or Dietary Question</option>
+                <option value="press">Press & Media</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us what's on your mind…"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Newsletter opt-in -->
+            <div class="form-group" style="display:flex;align-items:center;gap:10px;">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                style="width:auto;accent-color:var(--accent);"
+              />
+              <label for="newsletter" style="text-transform:none;letter-spacing:0;font-weight:400;font-size:0.88rem;color:var(--text-mid);">
+                Sign me up for the monthly newsletter (one email a month, no spam).
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message ☕
+            </button>
+
+            <!-- Success message shown by script.js after simulated send -->
+            <div class="form-success" id="formSuccess">
+              ✅ Thanks! We've received your message and will get back to you within 48 hours.
+            </div>
+
+            <p class="form-notice">
+              This form is for demonstration purposes. Messages are not actually sent.
+            </p>
+          </form>
+        </div>
+
+        <!-- ---- CONTACT INFO ---- -->
+        <div class="contact-info reveal">
+          <h2>Get in Touch</h2>
+
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <strong>Email</strong>
+              <span>hello@hotchocco.com</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-text">
+              <strong>Phone</strong>
+              <span>(555) 012-3456</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>Main Location</strong>
+              <span>Maple Street Market, Downtown<br />Mon–Fri · 8 am – 3 pm</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🅿️</div>
+            <div class="info-text">
+              <strong>Weekend Pop-Up</strong>
+              <span>Riverside Park, North End<br />Saturdays · 9 am – 1 pm</span>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <h3 style="margin-top:32px;margin-bottom:14px;font-size:1rem;">Follow Along</h3>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">✖</a>
+          </div>
+
+          <!-- Opening hours table -->
+          <table class="hours-table" style="margin-top:36px;">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td class="hours-open">8 am – 3 pm</td>
+                <td>Maple Street Market</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td class="hours-open">8 am – 3 pm</td>
+                <td>Maple Street Market</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td class="hours-open">8 am – 3 pm</td>
+                <td>Maple Street Market</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td class="hours-open">8 am – 3 pm</td>
+                <td>Maple Street Market</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td class="hours-open">8 am – 3 pm</td>
+                <td>Maple Street Market</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td class="hours-open">9 am – 1 pm</td>
+                <td>Riverside Park</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td style="color:var(--text-light);">Closed</td>
+                <td style="color:var(--text-light);">—</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div><!-- /contact-info -->
+
+      </div><!-- /contact-layout -->
+    </div>
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">The Hot Chocolate Co.</div>
+          <p>Warm, handcrafted drinks with heart. Rolling through your neighbourhood since 2018.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Fan Favourites</h4>
+          <ul>
+            <li><a href="menu.html">The Original Dark</a></li>
+            <li><a href="menu.html">Salted Caramel</a></li>
+            <li><a href="menu.html">Spiced Winter Blend</a></li>
+            <li><a href="menu.html">The Snowfall</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Find Us</h4>
+          <ul>
+            <li><a href="contact.html">📍 Maple Street Market, Downtown</a></li>
+            <li><a href="contact.html">📞 (555) 012-3456</a></li>
+            <li><a href="contact.html">✉️ hello@hotchocco.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Hot Chocolate Co. All rights reserved.</p>
+        <p>Made with ☕ and a lot of love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>

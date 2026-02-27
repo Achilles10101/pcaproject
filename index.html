@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hot Chocolate Co. — Warm Up Your World</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<!-- data-page="home" triggers the auto-open modal after 3 seconds -->
+<body data-page="home">
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-name">The Hot Chocolate Co.</span>
+        <span class="brand-tagline">Crafted with Love Since 2018</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Dropdown example: Menu with sub-items -->
+        <li class="nav-dropdown">
+          <button class="dropdown-toggle">Menu</button>
+          <div class="dropdown-menu">
+            <a href="menu.html#classic">Classic Drinks</a>
+            <a href="menu.html#seasonal">Seasonal Specials</a>
+            <a href="menu.html#specialty">Specialty Blends</a>
+          </div>
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (toggled by hamburger) -->
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </nav>
+
+  <!-- =====================================================
+       HERO SECTION
+       ===================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">☕ Now Open — Find Us on Maple Street</span>
+        <h1>Every Sip Feels<br /><span>Like Coming Home</span></h1>
+        <p class="hero-desc">
+          Rich, handcrafted hot chocolates made with single-origin cacao
+          and the finest seasonal ingredients. Your cosy cup awaits.
+        </p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary">Explore Our Menu</a>
+          <!-- Opens the "Today's Special" modal -->
+          <button class="btn btn-outline" data-modal-open style="color:#F5E6D3;border-color:#F5E6D3">Today's Special ✨</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       IMAGE CAROUSEL
+       ===================================================== -->
+  <section class="section carousel-section">
+    <div class="container">
+      <h2 class="section-title reveal">A Mug for Every Mood</h2>
+      <p class="section-subtitle reveal">From velvety classics to wild seasonal creations — there's always something new to try.</p>
+
+      <!-- Carousel wrapper — all JS-controlled -->
+      <div class="carousel-wrap">
+
+        <div class="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <img
+              src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=1200&q=80"
+              alt="A rich, steaming mug of hot chocolate topped with cream"
+            />
+            <div class="carousel-caption">
+              <h3>The Original Dark</h3>
+              <p>Bold 70% single-origin cacao. No frills. Just pure chocolate bliss.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <img
+              src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=1200&q=80"
+              alt="Spiced hot chocolate with cinnamon and star anise"
+            />
+            <div class="carousel-caption">
+              <h3>Spiced Winter Blend</h3>
+              <p>Warm cinnamon, cardamom, and a hint of chilli. Our winter bestseller.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <img
+              src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&q=80"
+              alt="Hot chocolate truck parked on a sunny street"
+            />
+            <div class="carousel-caption">
+              <h3>Find the Truck</h3>
+              <p>Rolling through your neighbourhood. Follow us on Instagram for live location updates.</p>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-slide">
+            <img
+              src="https://images.unsplash.com/photo-1614390950370-0b6e41a6b6bc?w=1200&q=80"
+              alt="A matcha and white hot chocolate layered drink"
+            />
+            <div class="carousel-caption">
+              <h3>The Snowfall</h3>
+              <p>White chocolate & vanilla, dusted with edible shimmer. Pure magic in a mug.</p>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+
+        <!-- Arrow controls -->
+        <button class="carousel-btn carousel-prev" aria-label="Previous slide">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next slide">&#8594;</button>
+
+        <!-- Dot indicators (built by JS) -->
+        <div class="carousel-dots"></div>
+
+      </div><!-- /carousel-wrap -->
+    </div>
+  </section>
+
+  <!-- =====================================================
+       WHY CHOOSE US — Feature Cards
+       ===================================================== -->
+  <section class="section" style="background:var(--white);padding-top:60px;padding-bottom:80px;">
+    <div class="container">
+      <h2 class="section-title reveal">Why The Hot Chocolate Co.?</h2>
+      <p class="section-subtitle reveal">We're obsessed with making the perfect cup, every single time.</p>
+
+      <div class="features-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🍫</div>
+          <h3>Single-Origin Cacao</h3>
+          <p>We source our chocolate directly from small farms in Ecuador and Ghana for the purest flavour.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🌿</div>
+          <h3>Seasonal & Fresh</h3>
+          <p>Our menu rotates with the seasons. Expect pumpkin spice in autumn, lavender in spring.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🥛</div>
+          <h3>All Milks Welcome</h3>
+          <p>Oat, almond, soy, coconut, or full-fat dairy — every cup is yours to customise.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">♻️</div>
+          <h3>Eco-Friendly Cups</h3>
+          <p>All our packaging is 100% compostable. Good for you, good for the planet.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="brand-name">The Hot Chocolate Co.</div>
+          <p>Warm, handcrafted drinks with heart. Rolling through your neighbourhood since 2018.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu highlights -->
+        <div class="footer-col">
+          <h4>Fan Favourites</h4>
+          <ul>
+            <li><a href="menu.html">The Original Dark</a></li>
+            <li><a href="menu.html">Salted Caramel</a></li>
+            <li><a href="menu.html">Spiced Winter Blend</a></li>
+            <li><a href="menu.html">The Snowfall</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact snippets -->
+        <div class="footer-col">
+          <h4>Find Us</h4>
+          <ul>
+            <li><a href="contact.html">📍 Maple Street Market, Downtown</a></li>
+            <li><a href="contact.html">📞 (555) 012-3456</a></li>
+            <li><a href="contact.html">✉️ hello@hotchocco.com</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Hot Chocolate Co. All rights reserved.</p>
+        <p>Made with ☕ and a lot of love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       MODAL — "Today's Special"
+       Opens on button click OR auto-opens after 3s on homepage.
+       id="specialModal" is required by script.js.
+       ===================================================== -->
+  <div class="modal-overlay" id="specialModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+
+      <div class="modal-header">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+        <h3 id="modalTitle">Today's Special ✨</h3>
+        <p>Friday, 14 February — limited quantities!</p>
+      </div>
+
+      <div class="modal-body">
+        <div class="special-card">
+          <div class="special-name">
+            The Valentine Velvet
+            <span class="special-badge">Today Only</span>
+          </div>
+          <p class="special-desc">
+            Our velvety dark chocolate base infused with rose water and raspberry
+            coulis, topped with house-made chantilly cream and edible rose petals.
+          </p>
+          <div class="special-price">$6.50</div>
+        </div>
+
+        <p style="font-size:0.88rem;color:var(--text-light);">
+          Available while supplies last. Ask your barista about vegan options!
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+        <button class="btn btn-outline" id="modalClose2">Maybe Later</button>
+      </div>
+
+    </div>
+  </div><!-- /modal-overlay -->
+
+  <!-- JavaScript (loaded at end for performance) -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- Inline-free: extra modal close button wired via JS selectors in script.js -->
+  <!-- The second close button uses the same closeModal logic via data attribute -->
+  <script>
+    /* Wire the "Maybe Later" button — keeps JS in one place but avoids inline handlers */
+    document.getElementById('modalClose2').addEventListener('click', function () {
+      document.getElementById('specialModal').classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  </script>
+
+</body>
+</html>

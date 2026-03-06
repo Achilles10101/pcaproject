@@ -121,7 +121,25 @@ p {
   height: 68px;
 }
 
-.navbar-brand { display: flex; flex-direction: column; line-height: 1.1; }
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.1;
+}
+
+.brand-favicon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar-brand .brand-name {
   font-family: var(--font-display);
@@ -715,7 +733,7 @@ p {
 }
 
 .footer-brand p { color: rgba(245,230,211,0.6); font-size: 0.9rem; max-width: 30ch; line-height: 1.65; margin: 0; }
-.footer-social  { display: flex; gap: 8px; margin-top: 20px; }
+
 
 .footer-col h4 {
   color: var(--accent);
